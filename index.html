@@ -2,54 +2,6 @@
   <head>
     <title>Project-80</title>
   </head>
-  <style>
-      body {
-  text-align : center;
-}
-
-#left {
-  float : left;
-  margin-left : 100px;
-}
-
-#right {
-  float : right;
-  margin-right : 150px;
-}
-
-input {
-  margin-bottom : 20px;
-}
-
-#paragraph1 {
-  margin-top : 255px;
-}
-
-#paragraph2 {
-  margin-top : 100px;
-}
-  </style>
-  <script>
-      function text_paragraph_1() {
-  var input = [];
-  for (var i = 1 ; i <= 6 ; i++) {
-   input.push(document.getElementById("1#" + i).value);
-  }
-  
- window.alert(document.getElementById("paragraph1").innerHTML = input.join(". "));
-   /*document.getElementById("paragraph1").innerHTMl = "ABCDE"; */
-}
-
-function text_paragraph_2() {
-  var input = [];
-  for (var i = 1 ; i <= 6 ; i++) {
-   input.push(document.getElementById("2#" + i).value);
-  }
-  
- window.alert(document.getElementById("paragraph2").innerHTML = input.join(". "));
-   /*document.getElementById("paragraph1").innerHTMl = "ABCDE"; */
-}
-  </script>
   <body>
     
     <h1>Make Paragraphs From Input Boxes Using Join Function</h1>
@@ -101,7 +53,51 @@ function text_paragraph_2() {
     </span>
         <br>
         <div id = "paragraph2"></div>
-    
-    
-  </body>
+      </body>
+      <style>
+        body {
+  text-align : center;
+}
+
+#left {
+  float : left;
+  margin-left : 100px;
+}
+
+#right {
+  float : right;
+  margin-right : 150px;
+}
+
+input {
+  margin-bottom : 20px;
+}
+
+#paragraph1 {
+  margin-top : 255px;
+  text-align : left;
+}
+
+#paragraph2 {
+  margin-top : 10px;
+  text-align : left;
+}
+      </style>
+      <script>
+        function text_paragraph_1() {
+  var input = [];
+  for (var i = 1 ; i <= 6 ; i++) {
+   input.push(document.getElementById("1#" + i).value);
+    document.getElementById("paragraph1").innerHTML = input.join(". ");
+  }
+}
+
+function text_paragraph_2() {
+  var input = [];
+  for (var i = 1 ; i <= 6 ; i++) {
+   input.push(document.getElementById("2#" + i).value);
+    document.getElementById("paragraph2").innerHTML = input.join(". ");
+  }
+}
+      </script>
 </html>
