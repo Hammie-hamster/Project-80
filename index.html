@@ -22,10 +22,11 @@ input {
 }
 
 #paragraph1 {
-  background-color : red;
-  width : 100%;
-  height : 100px;
   margin-top : 255px;
+}
+
+#paragraph2 {
+  margin-top : 100px;
 }
   </style>
   <script>
@@ -38,10 +39,21 @@ input {
  window.alert(document.getElementById("paragraph1").innerHTML = input.join(". "));
    /*document.getElementById("paragraph1").innerHTMl = "ABCDE"; */
 }
+
+function text_paragraph_2() {
+  var input = [];
+  for (var i = 1 ; i <= 6 ; i++) {
+   input.push(document.getElementById("2#" + i).value);
+  }
+  
+ window.alert(document.getElementById("paragraph2").innerHTML = input.join(". "));
+   /*document.getElementById("paragraph1").innerHTMl = "ABCDE"; */
+}
   </script>
   <body>
     
     <h1>Make Paragraphs From Input Boxes Using Join Function</h1>
+    <span>
       <section id = "left">
           1.
           <input type = "box" placeholder = "Input box 1" id = "1#1">
@@ -63,8 +75,32 @@ input {
           <br>
           <button onclick = "text_paragraph_1()">Get Paragraph 1</button>
       </section>
+      <section id = "right">
+          1.
+          <input type = "box" placeholder = "Input box 1" id = "2#1">
+          <br>
+          2.
+          <input type = "box" placeholder = "Input box 2" id = "2#2">
+          <br>
+          3.
+          <input type = "box" placeholder = "Input box 3" id = "2#3">
+          <br>
+          4.
+          <input type = "box" placeholder = "Input box 4" id = "2#4">
+          <br>
+          5.
+          <input type = "box" placeholder = "Input box 5" id = "2#5">
+          <br>
+          6.
+          <input type = "box" placeholder = "Input box 6" id = "2#6">
+          <br>
+          <button onclick = "text_paragraph_2()">Get Paragraph 2</button>
+      </section>
         <br>
         <div id = "paragraph1"></div>
+    </span>
+        <br>
+        <div id = "paragraph2"></div>
     
     
   </body>
