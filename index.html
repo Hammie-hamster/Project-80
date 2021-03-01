@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>Project-80</title>
+  </head>
+  <style>
+      body {
+  text-align : center;
+}
+
+#left {
+  float : left;
+  margin-left : 100px;
+}
+
+#right {
+  float : right;
+  margin-right : 150px;
+}
+
+input {
+  margin-bottom : 20px;
+}
+
+#paragraph1 {
+  background-color : red;
+  width : 100%;
+  height : 100px;
+  margin-top : 255px;
+}
+  </style>
+  <script>
+      function text_paragraph_1() {
+  var input = [];
+  for (var i = 1 ; i <= 6 ; i++) {
+   input.push(document.getElementById("1#" + i).value);
+  }
+  
+ window.alert(document.getElementById("paragraph1").innerHTML = input.join(". "));
+   /*document.getElementById("paragraph1").innerHTMl = "ABCDE"; */
+}
+  </script>
+  <body>
+    
+    <h1>Make Paragraphs From Input Boxes Using Join Function</h1>
+      <section id = "left">
+          1.
+          <input type = "box" placeholder = "Input box 1" id = "1#1">
+          <br>
+          2.
+          <input type = "box" placeholder = "Input box 2" id = "1#2">
+          <br>
+          3.
+          <input type = "box" placeholder = "Input box 3" id = "1#3">
+          <br>
+          4.
+          <input type = "box" placeholder = "Input box 4" id = "1#4">
+          <br>
+          5.
+          <input type = "box" placeholder = "Input box 5" id = "1#5">
+          <br>
+          6.
+          <input type = "box" placeholder = "Input box 6" id = "1#6">
+          <br>
+          <button onclick = "text_paragraph_1()">Get Paragraph 1</button>
+      </section>
+        <br>
+        <div id = "paragraph1"></div>
+    
+    
+  </body>
+</html>
